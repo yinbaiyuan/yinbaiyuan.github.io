@@ -1,9 +1,12 @@
 ---
-title: 主要功能与配置演示
+title: HOUZZkit OS 文档
 index: false
+author: Yin Baiyuan
+date: 2023-10-13
 icon: laptop-code
 category:
   - 使用指南
+  - 测试页面
 ---
 
 ## 目录

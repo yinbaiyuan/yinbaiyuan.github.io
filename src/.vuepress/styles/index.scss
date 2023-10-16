@@ -1,1 +1,10 @@
 // place your custom styles here
+.vp-navbar-start{
+    .vp-brand{
+        display: flex;
+        align-items: center;
+        .vp-nav-logo{
+            height: 20px;
+        }
+    }
+}

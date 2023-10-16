@@ -12,8 +12,8 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/logo.svg",
-
+  logo: "/houzzkit_logo.png",
+  
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
@@ -29,7 +29,9 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: "备案号|",
+
+      copyright: "Copyright © 2023 HOUZZkit Team",
 
       displayFooter: true,
 
@@ -60,7 +62,7 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      "/en/demo/encrypt.html": ["1234"],
     },
   },
 

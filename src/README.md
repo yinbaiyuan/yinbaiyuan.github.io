@@ -1,16 +1,16 @@
 ---
 home: true
 icon: home
-title: 项目主页
-heroImage: /logo.svg
+title: 主页
+heroImage: /houzzkit_logo.png
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 项目名称
-tagline: 你可以在这里放置或是整个项目的描述。
+heroText: 欢迎使用 HOUZZkit 
+tagline: 十分易用的智能家居中枢
 actions:
-  - text: 使用指南 💡
+  - text: 快速入门 💡
     link: ./demo/
     type: primary
 
@@ -18,7 +18,7 @@ actions:
     link: ./guide/
 
 highlights:
-  - header: 易于安装
+  - header: 上手即用
     image: /assets/image/box.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/3-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
@@ -259,7 +259,7 @@ highlights:
         link: https://theme-hope.vuejs.press/zh/guide/advanced/pwa.html
 
 copyright: false
-footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-present Mr.Hope
+footer: 使用 <a href="https://theme-hope.vuejs.press/zh/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2023 HOUZZkit team
 ---
 
 这是项目主页的案例。你可以在这里放置你的主体内容。
