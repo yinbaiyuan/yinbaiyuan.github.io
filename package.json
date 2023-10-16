@@ -9,7 +9,7 @@
     "docs:clean-dev": "vuepress dev src --clean-cache",
     "docs:dev": "vuepress dev src",
     "docs:update-package": "npx vp-update"
-  },
+  }, 
   "devDependencies": {
     "@vuepress/client": "2.0.0-beta.67",
     "vue": "^3.3.4",
