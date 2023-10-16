@@ -3,11 +3,13 @@ title: 快速上手
 index: false
 author: Yin Baiyuan
 date: 2023-10-13
-icon: laptop-code
-category:
-  - 使用指南
-  - 测试页面
+icon: rocket
+# category:
+#   - 使用指南
+#   - 测试页面
 ---
+
+HOUZZkit自带
 
 ## 目录
 

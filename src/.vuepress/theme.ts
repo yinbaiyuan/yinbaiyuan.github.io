@@ -6,15 +6,15 @@ export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Yin Baiyuan",
+    url: "https://www.houzzkit.com",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "/houzzkit_logo.png",
   
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "yinbaiyuan/houzzkit-document",
 
   docsDir: "src",
 
@@ -68,13 +68,13 @@ export default hopeTheme({
 
   plugins: {
     // You should generate and use your own comment service
-    comment: {
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
-    },
+    // comment: {
+    //   provider: "Giscus",
+    //   repo: "vuepress-theme-hope/giscus-discussions",
+    //   repoId: "R_kgDOG_Pt2A",
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
+    // },
 
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {

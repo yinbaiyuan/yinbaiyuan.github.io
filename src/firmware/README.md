@@ -1,9 +1,9 @@
 ---
-title: 固件文档
+title: 硬件和固件文档
 index: false
 author: Yin Baiyuan
 date: 2023-10-13
-icon: laptop-code
+icon: microchip
 category:
   - 使用指南
   - 测试页面
