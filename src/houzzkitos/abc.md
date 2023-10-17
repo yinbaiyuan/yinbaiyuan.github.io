@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: 子文件
+title: HOUZZkit 功能文档
 # 这是页面的图标
 icon: file
 # 这是侧边栏的顺序
@@ -22,11 +22,10 @@ sticky: true
 star: true
 ---
 
-## 目录
+## 主页功能区说明
+![主页功能区说明](%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%E5%8C%BA%E8%AF%B4%E6%98%8E.jpg)
+##
 
-## 郝佼佼
-
-![dfd](asdfasdf.jpg)
 
 - [Markdown 展示](markdown.md)
 
