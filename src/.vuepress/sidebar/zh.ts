@@ -10,15 +10,23 @@ export const zhSidebar = sidebar({
       link: "started/",
       children: "structure",
     },
-    "houzzkitos/",
+    {
+      text: "HOUZZkit OS 文档",
+      icon: "laptop-code",
+      prefix: "houzzkitos/",
+      link: "houzzkitos/",
+      children: "structure",
+    },
     "firmware/",
-    // {
-    //   text: "案例",
-    //   icon: "laptop-code",
-    //   prefix: "demo/",
-    //   link: "demo/",
-    //   children: "structure",
-    // },
+    {
+      text: "最新动态",
+      icon: "laptop-code",
+      prefix: "news/",
+      link: "news/",
+      children: "structure",
+    },
+    "qa/",
+
     // {
     //   text: "文档",
     //   icon: "book",
