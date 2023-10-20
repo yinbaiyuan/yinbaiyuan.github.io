@@ -12,7 +12,7 @@ export const zhSidebar = sidebar({
     },
     {
       text: "HOUZZkit OS 文档",
-      icon: "laptop-code",
+      icon: "book",
       prefix: "houzzkitos/",
       link: "houzzkitos/",
       children: "structure",
