@@ -6,11 +6,33 @@ date: 2023-10-13
 icon: book
 category:
   - 使用指南
-  - 测试页面
 ---
 
-## 主页功能区说明
-![](../.vuepress/public/assets/image/home_page_feature.jpg)
+HOUZZkit OS 是专为 HOUZZkit 设备打造的Web UI操作系统，操作直观，流程简单，让您轻松搭建智能家居系统。
+
+具体进入 HOUZZkit OS web ui 的方法请阅读[快速上手](../started/README.md)
+
+<!-- ##注册与登录
+
+##主页面
+
+##设置菜单
+
+##应用详细说明 -->
+
+- [注册与登录](regist_login.md)
+
+- [主页面](page.md)
+
+- [设置菜单](disable.md)
+
+- [应用详细说明](encrypt.md)
+
+- [应用商店应用详细说明](mydoc.md)
+
+
+## 主页功能区
+![HOUZZKIT OS HOME](/assets/image/hos_doc/hos_doc_home.jpg)
 
 
 ## ![](../.vuepress/public/assets/image/icon_hos_appstore.png) 应用商店使用说明
