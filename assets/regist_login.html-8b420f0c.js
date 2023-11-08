@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o}from"./app-cd6572b1.js";const r={};function _(c,n){return t(),o("div")}const l=e(r,[["render",_],["__file","regist_login.html.vue"]]);export{l as default};
