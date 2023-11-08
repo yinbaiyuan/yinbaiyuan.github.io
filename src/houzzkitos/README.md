@@ -10,15 +10,9 @@ category:
 
 HOUZZkit OS 是专为 HOUZZkit 设备打造的Web UI操作系统，操作直观，流程简单，让您轻松搭建智能家居系统。
 
-具体进入 HOUZZkit OS web ui 的方法请阅读[快速上手](../started/README.md)
+具体进入 HOUZZkit OS Web UI 的方法请阅读[快速上手](../started/README.md)。
 
-<!-- ##注册与登录
-
-##主页面
-
-##设置菜单
-
-##应用详细说明 -->
+HOUZZkit OS 的具体功能请阅读以下章节：
 
 - [注册与登录](regist_login.md)
 
@@ -30,7 +24,7 @@ HOUZZkit OS 是专为 HOUZZkit 设备打造的Web UI操作系统，操作直观�
 
 - [应用商店应用详细说明](mydoc.md)
 
-
+<!-- 
 ## 主页功能区
 ![HOUZZKIT OS HOME](/assets/image/hos_doc/hos_doc_home.jpg)
 
@@ -55,15 +49,6 @@ HOUZZkit OS 是专为 HOUZZkit 设备打造的Web UI操作系统，操作直观�
 3. 安装完成后，回到 Home Assistant 页面，并进行重启；
 4. 重启后，点击 “配置——设备与服务——添加集成”，查找并安装相应组件；
 5. 安装完成后，进行配置使用即可。
-![](../.vuepress/public/assets/image/screenshot_ha.png)
+![](../.vuepress/public/assets/image/screenshot_ha.png) -->
 
 
-<!-- - [Markdown 展示](markdown.md)
-
-- [页面展示](page.md)
-
-- [禁用展示](disable.md)
-
-- [加密展示](encrypt.md)
-
-- [测试页面](mydoc.md) -->
