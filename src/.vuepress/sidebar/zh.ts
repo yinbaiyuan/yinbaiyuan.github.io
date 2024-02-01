@@ -17,15 +17,20 @@ export const zhSidebar = sidebar({
       link: "houzzkitos/",
       children: "structure",
     },
-    "firmware/",
     {
-      text: "最新动态",
-      icon: "laptop-code",
-      prefix: "news/",
-      link: "news/",
+      text: "硬件和固件",
+      icon: "fa-solid fa-microchip",
+      prefix: "firmware/",
+      link: "firmware/",
       children: "structure",
     },
-    "qa/",
+    {
+      text: "常见问题",
+      icon: "fa-solid fa-circle-question",
+      prefix: "qa/",
+      link: "qa/",
+      children: "structure",
+    },
 
     // {
     //   text: "文档",
@@ -34,5 +39,12 @@ export const zhSidebar = sidebar({
     //   children: "structure",
     // },
     // "slides",
+    // {
+    //   text: "最新动态",
+    //   icon: "laptop-code",
+    //   prefix: "news/",
+    //   link: "news/",
+    //   children: "structure",
+    // },
   ],
 });
