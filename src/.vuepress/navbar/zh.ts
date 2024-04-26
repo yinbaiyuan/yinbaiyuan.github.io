@@ -27,6 +27,7 @@ export const zhNavbar = navbar([
   //     },
   //   ],
   // },
+  "/developers/",
   "/qa/",
 
   // {
