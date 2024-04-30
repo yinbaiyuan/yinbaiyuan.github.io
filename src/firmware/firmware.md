@@ -67,3 +67,35 @@ HOUZZkit 设备的固件为基于硬件特殊定制的固件，HOUZZkit固件不
       ![](/assets/image/started/houzzkit_started_step_8.jpg)
 
 **固件烧录完毕后，智能中枢会自动重启，稍等30s左右，即可通过浏览器访问智能中枢。**
+
+## 烧录bootloader和Linux kernel
+如果因为某些原因，只需要烧录bootloader或者linux内核镜像，可以使用以下办法。
+
+::: tip 
+刷机环境：
+完全按照`固件烧录`的刷机环境准备即可
+
+固件下载：
+文件名为 houzzkitos_firmware_uboot_xxxxxxxxxx.img 的文件为bootloader镜像。
+文件名为 houzzkitos_firmware_kernel_xxxxxxxxxx.img 的文件为linux内核镜像。
+地址一：[百度网盘](https://pan.baidu.com/s/1uH4C5_rmPRciLv5-Yr_etw?pwd=8888)
+:::
+
+### 烧录步骤
+1. 按照上述方式[进入刷机模式](./firmware.md#为智能中枢刷固件)。
+2. 烧录分区
+   ![](/assets/image/started/houzzkit_started_step_10.jpg)
+   - 点击`下载镜像`页签
+   - 在表格控件的空白区域右击，选择`添加项`
+   - 烧录bootloader
+     - 将地址改为 0x00004000
+     - 将名字改为 uboot
+     - 路径选择 bootloader 镜像文件
+     - 确认勾选行首复选框
+   - 烧录linux kernel
+     - 将地址改为 0x00008000
+     - 将名字改为 boot
+     - 路径选择 linux kernel 镜像文件
+     - 确认勾选行首复选框
+   - 点击`执行` ，开始烧录
+   - 如果提示失败，可以勾选`强制按地址写`后再试
