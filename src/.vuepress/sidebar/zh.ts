@@ -25,6 +25,13 @@ export const zhSidebar = sidebar({
       children: "structure",
     },
     {
+      text: "开发者指南",
+      icon: "laptop-code",
+      prefix: "developers/",
+      link: "developers/",
+      children: "structure",
+    },
+    {
       text: "常见问题",
       icon: "fa-solid fa-circle-question",
       prefix: "qa/",
