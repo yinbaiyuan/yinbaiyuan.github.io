@@ -10,3 +10,6 @@ category:
 
 ## 目录
 
+- [HDP安装包制作(基础)](houzzkit_docker_package_make.md)
+
+- [HDP安装包制作(高级)](houzzkit_docker_package_make_advance.md)
