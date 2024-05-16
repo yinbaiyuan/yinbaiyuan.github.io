@@ -39,7 +39,7 @@ version: 1.0.0                                #配置文件语法版本号
 step_pointer: "step1"                         #要执行的第一个步骤名称
 steps:                                        #列表形式定义所有步骤，每个步骤为一个对象
   step1:                                      #步骤对象，key值为步骤名称
-    flow_type: form                           #步骤类型，此处为`form`表单类型
+    step_type: form                           #步骤类型，此处为`form`表单类型
     title : 配置MQTT服务器                     #步骤交互弹框的标题
     form:                                     #定义具体的表单项
       - type: input                           #表单类型
@@ -51,7 +51,7 @@ steps:                                        #列表形式定义所有步骤，
         check_regular: ''                     #输入框内容正则匹配表达式
         required: true                        #是否为必填项
         disable: false                        #是否可用
-    jump_step : ''                            #定义跳过此步骤后的跳转目标
+    skip_to : ''                            #定义跳过此步骤后的跳转目标
     next_step : step2                         #定义此步骤正确完成后的下一个步骤
     button_content_submit : '提交'            #定义表单提交按钮显示的文字
   step2:                                      #再定义一个步骤，步骤名称为step2
@@ -61,11 +61,11 @@ steps:                                        #列表形式定义所有步骤，
       shell_parameters: [ "mqtt_service" ]    #定义脚本传参，可以把已经执行过的步骤中的表单值传入脚本
     next_step: step3                          #定义玩出的下一个步骤
   step3:                                      #定义步骤，步骤名称step3
-    step_type: create_file                    #定义步骤类型为`create_file`
-    parameters:                               #定义特别参数
-      file_path: '/tmp/configuration.yaml'    #定义写入内容的原文件路径
+    step_type: copy_directory                 #定义步骤类型为`copy_directory`
+    directory:                                #定义特别参数
+      file_path: '/tmp/configuration.yaml'    #定义复制内容的原文件路径
       write_to_path: '/var/data/zigbee2mqtt/data/configuration.yaml' 
-                                              #定义需要写入内容的目标文件
+                                              #定义需要写入内容的目标路径
 ```
 
 ### 范例2
@@ -160,6 +160,7 @@ step1:
 | :-----| ---- | :---- | :------- | :---- |
 | title | string | - | TRUE | 定义提示信息的标题 |
 | sub_title | string | - | TRUE | 定义副标题，也就是标题下面的小字 |
+| button_content_submit  | string | - | FALSE | 定义确认按键显示的文字 |
 
 结构示例：
 ``` yaml
@@ -210,9 +211,9 @@ step1:
     skip_to:  ''
 ```
 
-### `create_file` 类型
-- `create_file`类型步骤用于向用户请求将文件写入某些系统目录的权限。
-- 用户同意后，指定的原文件内容将写入目标文件。
+### `copy_directory` 类型
+- `copy_directory`类型步骤用于向用户请求将某路径内容写入某些系统目录的权限。
+- 用户同意后，指定的原路径内容将写入目标目录。
 - 步骤对象独有字段如下：
 
 | 字段 | 数据类型 |默认值 | 必须项 | 说明  |
@@ -223,17 +224,17 @@ step1:
 
 | 字段 | 数据类型 |默认值 | 必须项 | 说明  |
 | :-----| ---- | :---- | :------- | :---- |
-| file_path | string | - | TRUE | 待被写入的原文件绝对路径 |
+| directory_path | string | - | TRUE | 待被写入的原路径绝对路径或相对路径 |
 | write_to_path | string | - | TRUE | 需要写入内容的目标文件绝对路径 |
 
 结构示例：
 ``` yaml
 step1:                                      
-    step_type: create_file              
+    step_type: copy_directory              
     next_step: ''                       
     skip_to:  ''
     parameters:                               
-      file_path: '/tmp/configuration.yaml'    
+      directory_path: '/tmp/configuration.yaml'    
       write_to_path: '/var/data/zigbee2mqtt/data/configuration.yaml'
 ```
 
@@ -310,7 +311,7 @@ step1:
         value: ''                               #表单的默认值
         label: 填写手机号码                      #表单标题
         placeholder: '请输入正确的手机号格式'     #当输入框为空时显示的提示信息
-        check_regular: '/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/'
+        check_regular: '^1\d{10}$'
                                                 #对输入内容进行模式匹配的正则表达式
         mismatch_message: 手机号格式错误         #当模式匹配失败后提示的信息
         required: true                          #此表达单位必填项
@@ -362,8 +363,8 @@ step1:
       - type: checkbox                          #复选框类型
         key: time                               #获取表单的key值
         label: 具体时间                          #表单标题
-        value: [7,8]                            #表单的默认值
-        option:                                 #定义选项
+        value: ['7','8']                            #表单的默认值
+        options:                                #定义选项
           - label: 七点                         #选项一
             value: 7                            #选项一的值
           - label: 八点                         #选项二
@@ -449,6 +450,11 @@ step1:
       shell_info: '生成Z2M配置文件'
 ```
 
+::: warning 注意
+- 运行脚本的权限有限制，只能以当前登录HOS的用户权限运行脚本。
+- 对于系统文件夹内容的改变，需要通过copy_directory等流程实现。
+- 脚本执行过程中，如果需要传递值，可以以 {'key1':"value1",'key2':"value2"}的形式输出，除此以外的其他输出会被解析为脚本执行报错。
+:::
 
 ### `run_shell_script_in_container` 类型
 - `run_shell_script_in_container`类型步骤用于向用户请求在应用容器内执行脚本的权限。
@@ -483,7 +489,6 @@ step1:
       shell_parameters: [ "phone_number","home-assistant-token" ]
       shell_info: '更换npm源'
 ```
-
 
 ## 配置文件的使用
 
