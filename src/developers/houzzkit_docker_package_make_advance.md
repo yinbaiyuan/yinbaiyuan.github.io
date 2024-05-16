@@ -9,6 +9,13 @@ category:
   - 开发指南
 ---
 
+::: tip 开源信息
+应用商店的所有应用定义包已经开源到如下地址，欢迎大家fork、提交pull request。
+https://github.com/yinbaiyuan/houzzkit-application-store
+通过pull request评审的应用，会被上架到HOS应用商店中，感谢大家的支持。
+::: 
+
+
 对于很多的应用来说，想要正确的安装并使用，并不是简单的启动一个容器就行的。比如Zigbee2MQTT应用，需要配置MQTT服务器、zigbee网关设备地址，创建对应的配置文件，然后再启动容器，Z2M应才能够正常运行。
 
 HOS为Docker应用提供了`应用初始化配置`机制，开发者可以灵活编写配置流程，执行自动化脚本，从而运行容器启动前后的各种可执行逻辑。
